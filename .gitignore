@@ -1,0 +1,18 @@
+### Ignore data and output folders
+data/
+output/
+
+### Ignore checkpoints and cache
+.ipynb_checkpoints/
+__pycache__/
+
+### Ignore these notebooks for now because their too large to upload to Github
+code/03c_fibroblast_subcluster.ipynb
+code/03d_endothelial_cell_subcluster.ipynb
+code/03e_final_cluster_annotation.ipynb
+code/05b_DDEGs.ipynb
+code/06_GSEA.ipynb
+code/07_CellOracle_GRN_test.ipynb
+code/08_paper_figures.ipynb
+code/__pycache__/
+code/cache/
