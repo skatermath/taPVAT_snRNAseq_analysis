@@ -6,7 +6,8 @@ output/
 .ipynb_checkpoints/
 __pycache__/
 
-### Ignore these notebooks for now because their too large to upload to Github
+### Ignore these notebooks for now because they're too large to upload to Github
+code/05b_MetaDEGs.ipynb
 code/06_GSEA.ipynb
 code/07_CellOracle_GRN_test.ipynb
 code/08_paper_figures.ipynb
