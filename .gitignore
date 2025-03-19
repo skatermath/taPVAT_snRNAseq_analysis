@@ -2,6 +2,7 @@
 data/
 output/
 
+
 ### Ignore checkpoints and cache
 .ipynb_checkpoints/
 __pycache__/
@@ -13,3 +14,6 @@ code/07_CellOracle_GRN_test.ipynb
 code/08_paper_figures.ipynb
 code/__pycache__/
 code/cache/
+code/scVelo_and_CellOracle/scVelo/Loom Files/Loom Data
+
+.DS_Store
