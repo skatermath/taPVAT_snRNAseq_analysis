@@ -16,3 +16,19 @@ code/cache/
 code/scVelo_and_CellOracle/scVelo/Loom Files/Loom Data
 
 .DS_Store
+
+
+code/scVIDR_sandbox/scvidr_sandbox/scVIDR/figures/
+code/scVIDR_sandbox/scvidr_sandbox/scVIDR/data/
+code/scVIDR_sandbox/scvidr_sandbox/scVIDR/notebooks/figures/
+code/scVIDR_sandbox/scvidr_sandbox/scVIDR/models/
+code/scVIDR_sandbox/scvidr_sandbox/scVIDR/predictions/
+code/scVIDR_sandbox/scvidr_sandbox/usr/
+code/scVIDR_sandbox/scvidr_sandbox/var/
+code/scVelo_and_CellOracle/CellOracle/August2025/OracleLinksObjects/
+code/scVelo_and_CellOracle/CellOracle/December2025/scVelo/Figures/
+*.pt
+*.pkl
+*.celloracle.links
+*.celloracle.oracle
+*.h5ad
