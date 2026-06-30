@@ -1,0 +1,26 @@
+# scVIDR environment for MSU ICER (Linux + CUDA), created as a prefix env on scratch.
+# Built once on a dev node (internet egress); compute jobs just activate it.
+#   module purge && module load Miniforge3
+#   export CONDA_PKGS_DIRS=/mnt/scratch/bowmand8/taPVAT_scVIDR/conda_pkgs
+#   conda env create -p /mnt/scratch/bowmand8/taPVAT_scVIDR/envs/scVIDR_env -f <this file>
+name: scVIDR_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - adjustText==1.3.0
+      - anndata==0.11.4
+      - h5py==3.14.0
+      - matplotlib==3.10.3
+      - numpy==1.26.4
+      - pandas==2.3.0
+      - pyyaml==6.0.2
+      - scanpy==1.11.2
+      - scikit-learn==1.7.0
+      - scipy==1.15.2
+      - scvi-tools==1.3.1.post1
+      - seaborn==0.13.2
+      - torch==2.7.1
+      - tqdm==4.67.1

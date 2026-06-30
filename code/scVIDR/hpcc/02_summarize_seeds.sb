@@ -1,0 +1,31 @@
+#!/bin/bash
+#SBATCH --job-name=scvidr_seeds_sum
+#SBATCH --partition=general-long
+#SBATCH --time=01:30:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
+#SBATCH --output=/mnt/scratch/bowmand8/taPVAT_scVIDR/code/scVIDR/hpcc/logs/%x-%j.out
+
+# Per-stratum seed summaries (mean +/- SD across seeds) and combined tables.
+set -euo pipefail
+ROOT=/mnt/scratch/bowmand8/taPVAT_scVIDR
+cd "$ROOT"
+
+module purge
+module load Miniforge3
+source "${EBROOTMINIFORGE3}/etc/profile.d/conda.sh"
+conda activate "$ROOT/envs/scVIDR_env"
+
+echo "host=$(hostname)  start=$(date)"
+for AGE in 8W 24W; do
+  for SEX in M F Both; do
+    echo "### seed-summarize $AGE $SEX"
+    python code/scVIDR/scripts/summarize_seeds.py --age "$AGE" --sex "$SEX" --seeds 0,1,2,3,4 \
+      || echo "WARNING: seed-summarize failed for $AGE $SEX"
+  done
+done
+
+python code/scVIDR/scripts/aggregate_seeds.py
+echo "seed summarize + aggregate done  end=$(date)"

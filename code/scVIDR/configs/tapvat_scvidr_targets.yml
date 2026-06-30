@@ -1,0 +1,40 @@
+input_h5ad: data/Full_taPVAT_combined_annotated_with_immune_fibro_ecs_all_genes_unnormalized.h5ad
+output_dir: code/scVIDR/results
+upstream_dir: code/scVIDR/scVIDR_code_from_github
+
+obs_columns:
+  time: time
+  sex: sex
+  diet: diet
+  celltype: celltype   # fine-grained labels; used directly as the prediction target
+
+ages:
+  - 24W
+  - 8W
+
+sexes:
+  M:
+    - M
+  F:
+    - F
+  Both:
+    - M
+    - F
+
+control_diet: Control
+treated_diet: HF
+
+# No cell-count threshold: every cell type is run regardless of group size.
+# Set to 0 so all targets are marked eligible.
+min_treated_cells: 0
+# Minimum cells required in the Control group
+min_control_cells: 0
+
+# Fine celltype labels to exclude entirely (technical artifacts)
+exclude_celltypes:
+  - Doublets
+
+training:
+  max_epochs: 100
+  run_gene_scores: true
+  gene_score_training_size: 100000

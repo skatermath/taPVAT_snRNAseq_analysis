@@ -1,0 +1,33 @@
+# scVIDR environment for MSU ICER (Linux + CUDA).
+# Mirrors the locally-validated Mac stack, but on Linux `pip install torch==2.7.1`
+# pulls the CUDA build automatically, so the same code runs on ICER GPU nodes.
+# Versions pinned to the stack that was validated locally (see
+# code/scVIDR/docs/methods_scVIDR_prediction.md).
+#
+# Create on a dev node:
+#   module purge
+#   module load Conda/3
+#   conda env create -f envs/scVIDR_env_hpcc.yml
+#   conda activate scVIDR_env
+name: scVIDR_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - adjustText==1.3.0
+      - anndata==0.11.4
+      - h5py==3.14.0
+      - matplotlib==3.10.3
+      - numpy==1.26.4
+      - pandas==2.3.0
+      - pyyaml==6.0.2
+      - scanpy==1.11.2
+      - scikit-learn==1.7.0
+      - scipy==1.15.2
+      - scvi-tools==1.3.1.post1
+      - seaborn==0.13.2
+      - seaborn==0.13.2
+      - torch==2.7.1
+      - tqdm==4.67.1
