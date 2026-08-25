@@ -2,5 +2,5 @@ Analysis of 25 single-nuclei RNA sequencing samples of thoracic aorta perivascul
 
 [Link to interactive data](pvatcellatlas.azurewebsites.net/)
 
-[Link to preprint publication](https://www.biorxiv.org/content/10.1101/2025.02.13.636878v1)
+[Link to preprint publication](https://www.biorxiv.org/content/10.1101/2025.02.13.636878v2)
 
